@@ -1,0 +1,78 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f0f4f8;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 30px;
+  background: #ffffff;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+}
+
+h1, h2, h3 {
+  text-align: center;
+  color: #333;
+}
+
+.form-box {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+input {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+button {
+  padding: 12px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+th, td {
+  padding: 12px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #007bff;
+  color: white;
+}
+
+.best-ride {
+  margin-top: 25px;
+  padding: 15px;
+  background-color: #d1ecf1;
+  border-left: 6px solid #17a2b8;
+  border-radius: 8px;
+  color: #0c5460;
+}

@@ -1,0 +1,1 @@
+http://localhost/phpmyadmin/index.php?route=/sql&pos=0&db=cabfaredb&table=rides

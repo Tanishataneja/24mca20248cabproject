@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cab Fare Estimator</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>🚖 Intelligent Cab Fare Estimator</h1>
+
+    <form action="/estimate" method="POST" class="form-box">
+      <input type="text" name="pickup" placeholder="📍 Pickup Location" required>
+      <input type="text" name="dropoff" placeholder="📍 Dropoff Location" required>
+      <button type="submit">Estimate Fare</button>
+    </form>
+
+    {% if rides %}
+    <div class="rides-section">
+      <h2>🛣 Available Ride Options</h2>
+      <table>
+        <tr>
+          <th>Distance (km)</th>
+          <th>Fare (₹)</th>
+          <th>Ride Time (min)</th>
+        </tr>
+        {% for ride in rides %}
+        <tr>
+          <td>{{ ride.distance }}</td>
+          <td>₹{{ ride.fare }}</td>
+          <td>{{ ride.ride_time }}</td>
+        </tr>
+        {% endfor %}
+      </table>
+
+      <div class="best-ride">
+        <h3>🌟 Best Ride:</h3>
+        <p><strong>Distance:</strong> {{ best_ride.distance }} km</p>
+        <p><strong>Fare:</strong> ₹{{ best_ride.fare }}</p>
+        <p><strong>Ride Time:</strong> {{ best_ride.ride_time }} minutes</p>
+      </div>
+    </div>
+    {% endif %}
+  </div>
+</body>
+</html>
